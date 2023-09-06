@@ -1,0 +1,130 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #b1c7f6;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.hero {
+    background-color: #540a68;
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 10px;
+    background: linear-gradient(to left, rgb(218, 47, 212), #540a68);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 10px;
+    background: linear-gradient(to right, rgb(218, 47, 212), #540a68);
+}
+
+.hero h1 {
+    font-weight: normal;
+    font-size: 6rem;
+}
+
+.hero h2 {
+    font-weight: normal;
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+.filter-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.filter-nav a {
+    padding: 9px;
+    text-decoration: none;
+    color: #540a68;
+    border: 1px solid #bb9cc4;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.animals {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.animal-cards {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.animal-card-photo {
+    order: 1;
+    grid-row: 1;
+    overflow: hidden;
+}
+
+.animal-cards:hover img {
+    transform: rotate(20deg) scale(1.4);
+}
+
+.animal-card-text {
+    padding: 20px 25px;
+}
+
+.animal-card-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease-in-out;
+}
+
+.animal-card-text h3 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+    font-size: 1.8rem;
+}
+
+.animal-card-text small {
+    color: grey;
+}
+
+.animal-card-text p {
+    margin: .8rem 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.primary-btn {
+    background: linear-gradient(rgb(184, 15, 99), rgb(46, 9, 57));
+    color: white;
+    padding: 12px;
+    border-radius: 75px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.primary-btn:hover {
+    background: linear-gradient(rgb(46, 9, 57),rgb(184, 15, 99));
+}
